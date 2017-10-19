@@ -47,7 +47,18 @@ class UglyNumber {
 	}
 }
 
-let number = new UglyNumber(15)
-
+let number = new UglyNumber(7)
 console.log(number.getUglyNo());
-console.log(number.getUglyArray()) // 1,2,3,4,5,6,8
+console.log(number.getUglyArray()) 
+
+let number1 = new UglyNumber(10)
+console.log(number1.getUglyNo());
+console.log(number1.getUglyArray()) 
+
+let number2 = new UglyNumber(15)
+console.log(number2.getUglyNo());
+console.log(number2.getUglyArray()) 
+
+// let number3 = new UglyNumber(150)
+// console.log(number3.getUglyNo());
+// console.log(number3.getUglyArray()) 
