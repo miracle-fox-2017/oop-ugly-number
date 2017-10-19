@@ -2,8 +2,8 @@
 class UglyNumber {
   constructor(input,arr,hasil){
     this.input=input;
-    this.ArrUgly=[];
     this.hasil=hasil;
+    this.ArrUgly=[];
   }
   getUglyNo() {
 
@@ -15,7 +15,7 @@ class UglyNumber {
       i++;
 
       if(this.isUgly(i) == 1) {
-
+        // this.ArrUgly.push(i)
         countUglyNumber++;
 
       }
@@ -48,18 +48,21 @@ class UglyNumber {
     return number
   }
   getUglyArr(){
+    //kenapa dibuat proses mengecek ugly number
+    //lagi disini dan tidak hanya memanggil method getUglyNo
+    //karena di getUgly num i nya dimulai dr 1, sehingga hanya akan
+    //mengeluarkan output array ugly number sepanjang 6 bukan 7
     let i =0;
-    while(this.ArrUgly.length<=this.input){
+    while(this.ArrUgly.length<this.input){
       i++
       if(this.isUgly(i)=== true){
         this.ArrUgly.push(i)
       }
+
     }
-    return 'ini adalah value ugly number ke '+ this.input+ ' = '+this.hasil+' dan ini adalah array Ugly Number sejumlah '+ this.input + ' = '+[this.ArrUgly]
+    return 'ini value ke '+this.input+' dari array Ugly Number = '+this.hasil+' dan ini array ugly numbernya '+this.ArrUgly;
+  }
 }
-}
-
-
 
 
 
