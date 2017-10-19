@@ -31,15 +31,18 @@ class Ugly_number{
     return i; // << 7
   }
 
-  getUglyArray(input){
+
+  getUglyArray(param){
+
     let arrTemp = []
     // loop uglyNumber sampai 100
     for(let i=1; i<100; i++){
       arrTemp.push(this.getUglyNo(i))
     }
+    // console.log('=======' + arrTemp);
     // loop ambil arr ugly number > input
     let arrUglyNumber = []
-    for(let j=0; j<input; j++){
+    for(let j=0; j<param; j++){
       arrUglyNumber.push(arrTemp[j])
     }
     // console.log(arrUglyNumber)
@@ -49,6 +52,7 @@ class Ugly_number{
 }
 
 let ugly_number = new Ugly_number()
+
 
 // console.log(ugly_number.getUglyNo(150))
 console.log(ugly_number.getUglyNo(7))
