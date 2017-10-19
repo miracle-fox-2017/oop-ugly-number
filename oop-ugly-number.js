@@ -24,15 +24,15 @@ class UglyNumber {
 	getUglyNo() {
 		let i = 1;
 		let countUglyNumber = 1; // ugly number count
+		this.addUgly(i);
 
 		while(this.number > countUglyNumber) {
 			i++;
-			if(this.isUgly(i) == 1) {
-			  countUglyNumber++;
-			}
 
-			// console.log(countUglyNumber);
-			this.arrCountUglyNumber.push(countUglyNumber);
+			if(this.isUgly(i) == 1) {
+			  this.addUgly(i);
+			  countUglyNumber++;
+			}			
 		}
 
 		return i;
@@ -41,8 +41,13 @@ class UglyNumber {
 	getUglyArray() {
 		return this.arrCountUglyNumber;
 	}
+
+	addUgly(num) {
+		this.arrCountUglyNumber.push(num);
+	}
 }
 
-let number = new UglyNumber(7)
+let number = new UglyNumber(15)
+
 console.log(number.getUglyNo());
-console.log(number.getUglyArray()) // 1, 2, 3, 4, 5, 6 , 8
+console.log(number.getUglyArray()) // 1,2,3,4,5,6,8
